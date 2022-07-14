@@ -14,19 +14,14 @@
 
     <!-- You can also require other files to run in this process -->
     <div master id="contentWrapper">
-      <webview
-        id="iframeComp"
-        src="https://static1.einfomax.co.kr/html/test/test.html"
-        preload="preloadwebview.js"
-        disablewebsecurity="false"
-        useragent="weblink3"
-        allowpopups="true"
-        webpreferences="nativeWindowOpen=yes, contextIsolation=no"
-        style="width: 100%; height: 100%; border-width: 0px"
-        nodeIntegration
-        nodeintegrationinsubframes
-      ></webview>
     </div>
+    <div id="webview_container"></div>
     <script src="./renderer.js"></script>
+
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+    <script type="text/babel" src="./webview.js"></script>
   </body>
 </html>
