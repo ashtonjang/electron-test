@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (atag) {
       if (atag.href && atag.target === "_blank") {
         window.open(atag.href);
+        e.preventDefault();
+        e.stopPropagation();
       }
-      e.preventDefault();
-      e.stopPropagation();
     }
   });
 });
